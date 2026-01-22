@@ -6,6 +6,6 @@ COPY package.json .
 
 RUN npm install
 
-COPY consumer.js .
+COPY consumer__dlq.js .
 
 CMD ["npm", "start"]
