@@ -1,0 +1,13 @@
+{
+  "name": "nguyentrungquyen_22640121",
+  "version": "1.0.0",
+  "description": "Product Manager - Singleton + Factory Pattern",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"No test\""
+  },
+  "keywords": [],
+  "author": "Nguyen Trung Quyen",
+  "license": "ISC"
+}
