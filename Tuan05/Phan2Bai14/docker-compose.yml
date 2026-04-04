@@ -1,0 +1,18 @@
+services:
+  app1:
+    image: busybox
+    container_name: app1_container
+    command: sh -c "while true; do echo Hello from app1; sleep 5; done"
+    networks:
+      - my_network
+
+  app2:
+    image: busybox
+    container_name: app2_container
+    command: sh -c "while true; do ping app1; sleep 5; done"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
