@@ -1,0 +1,30 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_db
+    restart: always
+    ports:
+      - "27018:27017" # host:container
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - node_mongo_net
+    # Bỏ healthcheck để tránh lỗi trên Windows
+
+  nodeapp:
+    build: .
+    container_name: node_app
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - "3000:3000"
+    networks:
+      - node_mongo_net
+
+volumes:
+  mongo_data:
+
+networks:
+  node_mongo_net:
+    driver: bridge
