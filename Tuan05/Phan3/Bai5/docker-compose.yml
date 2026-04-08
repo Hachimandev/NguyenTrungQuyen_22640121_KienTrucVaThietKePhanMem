@@ -1,0 +1,39 @@
+services:
+  vote:
+    build: ./vote
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+  result:
+    build: ./result
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  worker:
+    build: ./worker
+    depends_on:
+      - redis
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: voteuser
+      POSTGRES_PASSWORD: votepass
+      POSTGRES_DB: votedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
