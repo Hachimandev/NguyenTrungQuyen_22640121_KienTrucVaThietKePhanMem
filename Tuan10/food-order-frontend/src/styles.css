@@ -1,0 +1,219 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f7f8fb;
+  color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.5vw, 2.6rem);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #475569;
+}
+
+nav button {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  margin-bottom: 20px;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.auth-card {
+  max-width: 420px;
+}
+
+.form-field {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  color: #475569;
+}
+
+.form-field input {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+button.primary {
+  border: none;
+  background: #6366f1;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+button.link-button {
+  border: none;
+  background: transparent;
+  color: #4f46e5;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.message {
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1px solid #c7d2fe;
+  background: #eef2ff;
+  color: #1e293b;
+}
+
+.food-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.food-card,
+.order-card,
+.cart-item,
+.order-detail {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.food-card {
+  display: grid;
+  gap: 10px;
+}
+
+.food-meta,
+.cart-item,
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-card {
+  justify-content: space-between;
+}
+
+.cart-list {
+  display: grid;
+  gap: 14px;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  border-radius: 10px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.order-list {
+  display: grid;
+  gap: 12px;
+}
+
+.order-detail {
+  display: grid;
+  gap: 12px;
+}
+
+.payment-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.payment-panel select {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.paid-note {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+@media (max-width: 920px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}
